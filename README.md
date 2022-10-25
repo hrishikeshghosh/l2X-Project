@@ -13,7 +13,7 @@ PDB supports and advocates for true serverless and pluggable API development.
 
 # ScreenShots
 
-![image](https://user-images.githubusercontent.com/66993478/197834395-09711a40-1892-4348-93f9-0a9ffa7545ca.png)
-![image](https://user-images.githubusercontent.com/66993478/197834439-a15c6bea-d5f6-42b1-b8e9-714d0b8f7c5c.png)
-![image](https://user-images.githubusercontent.com/66993478/197834493-869ff3f2-ad5b-4e36-8677-4b7d3143fcaf.png)
+![image](https://user-images.githubusercontent.com/66993478/197834659-03dcb358-fdd0-43ed-9a02-c00f594791f6.png)
+![image](https://user-images.githubusercontent.com/66993478/197834701-8cd36d1c-c8ad-4c63-9722-ad47c05eb33e.png)
+![image](https://user-images.githubusercontent.com/66993478/197834739-2d2844f1-34de-4c00-9a87-1971125c62ea.png)
 
