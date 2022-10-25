@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Record</title>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+    <link rel="stylesheet" href="./create.css"/>
+</head>
+<body>
+     <div class="create-root">
+         <h1>Delete an old Record</h1>
+      
+        <input id="recNo" class="id_field" placeholder="Enter record Number"/>
+        <button onclick="saveEmployee()">Submit</button>
+    </div>
+    <script>
+        function validateFormData(){
+       
+            var recNo=$("#recNo").val()
+            
+            if(recNo===""){
+                alert("Record no is required!")
+                $("#recNo").focus();
+                return;
+            }
+          
+        }
+
+        function saveEmployee(){
+            var jsonStr=validateFormData();
+            console.log(jsonStr)
+            if(jsonStr==="") return;
+
+            var putReqStr= createREMOVERecordRequest("90937660|-31949268412991701|90952957", "Project", "worker-Rel", $("#recNo").val());
+           
+            console.log(putReqStr)
+            jQuery.ajaxSetup({async:false})
+            var resultObj=executeCommandAtGivenBaseUrl(putReqStr,"http://api.login2explore.com:5577","/api/iml")
+            jQuery.ajaxSetup({async:true})
+            alert(JSON.stringify(resultObj))
+        }
+
+        function resetPage(){
+            $('#empID').val("");
+            $('#empName').val("");
+            $('#empEmail').val("");
+        }
+    </script>
+</body>
+</html>
